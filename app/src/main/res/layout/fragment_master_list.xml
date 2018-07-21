@@ -11,12 +11,17 @@
  limitations under the License.-->
 
 <!-- GridView that displays AndroidMe images -->
-<!-- TODO (1) Turn this into a LinearLayout and add a "Next" button at the bottom of the gridview -->
-<GridView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/images_grid_view"
+<!-- COMPLETED (1) Turn this into a LinearLayout and add a "Next" button at the bottom of the gridview -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <GridView
+    android:id="@+id/images_grid_view"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="7"
     android:adjustViewBounds="true"
     android:columnWidth="180dp"
     android:gravity="center"
@@ -25,4 +30,14 @@
     android:padding="16dp"
     android:stretchMode="columnWidth"
     android:verticalSpacing="8dp">
-</GridView>
+    </GridView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:text="Next"
+        android:id="@+id/btn_next"/>
+
+</LinearLayout>
